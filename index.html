@@ -5,27 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santos TCG</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <!-- Removi o script daqui e coloquei no final do body, é uma boa prática para carregar a página mais rápido -->
 </head>
 <body>
     <header>
         <div id="moedas">
-            🪙 000
+            🪙 <span id="saldo">000</span>
         </div>
         <div id="usuario">
-            <div id="nome">
-                teste
-            </div>
-            <div id="foto">
-                🤡
-            </div>
+            <div id="nome">teste</div>
+            <div id="foto">🤡</div>
         </div>
     </header>
-    <main>
-        
-    </main>
-    <footer>
 
+    <main>
+        <!-- Área para abrir pacotes -->
+        <section id="pacotes">
+            <h2>Pacotes Diários</h2>
+            <div class="card-pacote">
+                <div class="icone-pacote">📦</div>
+                <button id="btn-abrir">Abrir Pacote</button>
+            </div>
+        </section>
+
+        <!-- Área onde as cartas vão aparecer (Album) -->
+        <section id="album">
+            <h2>Últimas Cartas</h2>
+            <div class="grid-cartas">
+                <div class="carta vazia">?</div>
+                <div class="carta vazia">?</div>
+                <div class="carta vazia">?</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav id="menu-inferior">
+            <button class="menu-btn ativo">🏠 Início</button>
+            <button class="menu-btn">📖 Álbum</button>
+            <button class="menu-btn">🛒 Loja</button>
+        </nav>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

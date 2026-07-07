@@ -1,17 +1,146 @@
-body{
-    background-color: rgb(56, 56, 56);
-    color: rgb(255, 236, 223);
-    font-family: Arial, Helvetica, sans-serif;
+/* Reset básico para garantir que fique igual em todo celular */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header{
+body {
+    background-color: rgb(30, 30, 30); /* Dei uma leve escurecida para destacar os cards */
+    color: rgb(255, 236, 223);
+    font-family: Arial, Helvetica, sans-serif;
+    
+    /* Configuração para o rodapé ficar sempre embaixo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgb(45, 45, 45);
+    border-bottom: 2px solid rgb(70, 70, 70);
+    position: sticky;
+    top: 0;
 }
 
-#usuario{
+#moedas {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+#usuario {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 10px;
     text-align: right;
+}
+
+#foto {
+    font-size: 1.5rem;
+    background-color: rgb(70, 70, 70);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* Área Principal */
+main {
+    flex: 1; /* Faz o main ocupar todo o espaço livre */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #aaa;
+}
+
+/* Estilo do Pacote */
+.card-pacote {
+    background-color: rgb(50, 50, 50);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgb(80, 80, 80);
+}
+
+.icone-pacote {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+#btn-abrir {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+#btn-abrir:active {
+    background-color: #45a049;
+    transform: scale(0.98);
+}
+
+/* Estilo do Álbum (Grid de Cartas) */
+.grid-cartas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+}
+
+.carta {
+    background-color: rgb(60, 60, 60);
+    aspect-ratio: 2.5 / 3.5; /* Proporção padrão de carta de TCG */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(100, 100, 100);
+    border: 2px dashed rgb(80, 80, 80);
+}
+
+/* Rodapé / Menu Inferior */
+footer {
+    background-color: rgb(45, 45, 45);
+    border-top: 2px solid rgb(70, 70, 70);
+    padding: 10px 0;
+    position: sticky;
+    bottom: 0;
+}
+
+#menu-inferior {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-btn.ativo {
+    color: white;
+    font-weight: bold;
 }
