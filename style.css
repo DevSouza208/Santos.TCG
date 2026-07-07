@@ -9,3 +9,9 @@ header{
     flex-direction: row;
     justify-content: space-between;
 }
+
+#usuario{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+}
