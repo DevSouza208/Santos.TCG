@@ -2,7 +2,6 @@ const btnAbrir = document.getElementById('btn-abrir');
 const saldoElement = document.getElementById('saldo');
 const gridCartas = document.querySelector('.grid-cartas');
 
-// Use O MESMO link que você já tinha gerado antes
 const API_URL = "https://script.google.com/macros/s/AKfycbyxG_ix80WMPVcVJWv5EjgGMDqt2r9HEkx1aDga1UH3vmFomr3RjR4VJ8TGR5JpqbNrcQ/exec";
 
 const nomeUsuario = "teste"; 
@@ -91,4 +90,4 @@ btnAbrir.addEventListener('click', () => {
     } else {
         alert('❌ Moedas insuficientes!');
     }
-});
+});21
